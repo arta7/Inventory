@@ -11,14 +11,14 @@ import { Select, Option } from '@app/components/common/selects/Select/Select';
 import { ManOutlined, WomanOutlined } from '@ant-design/icons';
 import { Space } from 'antd';
 import  Tables  from './Tables';
-
 interface DefinePostData {
   Title: string;
   Code: string;
+
 }
 
 
- const DefinePost: React.FC = () => {
+ const DefineParts: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const [isLoading, setLoading] = useState(false);
@@ -26,18 +26,32 @@ interface DefinePostData {
   const { t } = useTranslation();
 
   const handleSubmit = (values: DefinePostData) => {
+    // setLoading(true);
+    // dispatch(doSignUp(values))
+    //   .unwrap()
+    //   .then(() => {
+    //     notificationController.success({
+    //       message: t('auth.signUpSuccessMessage'),
+    //       description: t('auth.signUpSuccessDescription'),
+    //     });
+    //     navigate('/auth/login');
+    //   })
+    //   .catch((err) => {
+    //     notificationController.error({ message: err.message });
+    //     setLoading(false);
+    //   });
   };
 
   return (
     <div >
-    <div style={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center'
-    }}>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
     <Auth.FormWrapper >
       <BaseForm layout="vertical" onFinish={handleSubmit}  >
-        <S.Title>تعریف گروه سازمانی</S.Title>
+        <S.Title>تعریف  بخش</S.Title>
         <Auth.FormItem
           name="Title"
           label="عنوان"
@@ -54,6 +68,27 @@ interface DefinePostData {
           <Auth.FormInput placeholder="کد " />
         </Auth.FormItem>
       
+        <BaseButtonsForm.Item name="State" label="وضعیت"
+           rules={[{ required: true}]}
+        >
+      <Select>
+        <Option value="Active">
+          <Space align="center">
+            {/* <ManOutlined /> */}
+            فعال
+          </Space>
+        </Option>
+        <Option value="NoActive">
+          <Space align="center">
+            {/* <WomanOutlined /> */}
+             غیرفعال 
+          </Space>
+        </Option>
+      </Select>
+
+      
+    </BaseButtonsForm.Item>
+
         <BaseForm.Item noStyle>
           <Auth.SubmitButton type="primary" htmlType="submit" loading={isLoading}>
            ثبت
@@ -63,9 +98,9 @@ interface DefinePostData {
       </BaseForm>
     </Auth.FormWrapper>
     </div>
-    <Tables />
-    </div>
+     <Tables />
+     </div>
   );
 };
 
-export default DefinePost;
+export default DefineParts;

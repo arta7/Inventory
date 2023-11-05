@@ -21,6 +21,8 @@ import { CreditCard } from '@app/components/profile/profileCard/profileFormNav/n
 import { useAppSelector } from '@app/hooks/reduxHooks';
 import { Dates } from '@app/constants/Dates';
 import { notificationController } from '@app/controllers/notificationController';
+import  Tables  from './Tables';
+
 
 interface PersonalInfoFormValues {
   birthday?: string;
@@ -37,7 +39,7 @@ const initialPersonalInfoValues: PersonalInfoFormValues = {
   birthday: undefined,
 };
 
-export const PersonalSignUp: React.FC = () => {
+ const PersonalSignUp: React.FC = () => {
   const user = useAppSelector((state) => state.user.user);
 
   const [isFieldsChanged, setFieldsChanged] = useState(false);
@@ -88,6 +90,12 @@ export const PersonalSignUp: React.FC = () => {
   );
 
   return (
+    <div >
+    <div style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }}>
     <Card>
       <BaseButtonsForm
         form={form}
@@ -129,5 +137,10 @@ export const PersonalSignUp: React.FC = () => {
         </Row>
       </BaseButtonsForm>
     </Card>
+    </div>
+     <Tables />
+     </div>
   );
 };
+
+export default PersonalSignUp;

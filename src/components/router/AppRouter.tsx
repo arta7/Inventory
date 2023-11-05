@@ -60,6 +60,9 @@ const LeafletMaps = React.lazy(() => import('@app/pages/maps/LeafletMapsPage/Lea
 const ReactSimpleMaps = React.lazy(() => import('@app/pages/maps/ReactSimpleMapsPage/ReactSimpleMapsPage'));
 const PigeonsMaps = React.lazy(() => import('@app/pages/maps/PigeonsMapsPage/PigeonsMapsPage'));
 const Logout = React.lazy(() => import('./Logout'));
+const DefinePost = React.lazy(() => import('@app/NewPage/DefinePost'));
+const DefineProduct = React.lazy(() => import('@app/NewPage/DefineProduct'));
+
 
 // export const NFT_DASHBOARD_PATH = '/';
 export const MEDICAL_DASHBOARD_PATH = '/';
@@ -119,6 +122,8 @@ const Payments = withLoading(PaymentsPage);
 
 const AuthLayoutFallback = withLoading(AuthLayout);
 const LogoutFallback = withLoading(Logout);
+const DefinePostFallback = withLoading(DefinePost);
+const DefineProductFallback = withLoading(DefineProduct);
 
 export const AppRouter: React.FC = () => {
   const protectedLayout = (
@@ -141,6 +146,11 @@ export const AppRouter: React.FC = () => {
             <Route path="advanced-forms" element={<AdvancedForm />} />
           </Route>
           <Route path="data-tables" element={<DataTables />} />
+
+          
+          <Route path="DefinePost" element={<DefinePostFallback />} />
+          <Route path="DefineProduct" element={<DefineProductFallback/>} />
+          
           <Route path="charts" element={<Charts />} />
           <Route path="maps">
             <Route path="google-maps" element={<Google />} />

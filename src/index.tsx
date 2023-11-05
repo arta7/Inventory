@@ -8,6 +8,7 @@ import { store } from '@app/store/store';
 import ReactDOM from 'react-dom';
 import React from 'react';
 
+
 interface EventTarget {
   state?: 'activated';
 }

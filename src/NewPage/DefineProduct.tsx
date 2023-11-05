@@ -10,7 +10,7 @@ import { BaseButtonsForm } from '@app/components/common/forms/BaseButtonsForm/Ba
 import { Select, Option } from '@app/components/common/selects/Select/Select';
 import { ManOutlined, WomanOutlined } from '@ant-design/icons';
 import { Space } from 'antd';
-
+import  Tables  from './Tables';
 interface DefinePostData {
   Title: string;
   Code: string;
@@ -18,7 +18,7 @@ interface DefinePostData {
 }
 
 
-export const DefineProduct: React.FC = () => {
+ const DefineProduct: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const [isLoading, setLoading] = useState(false);
@@ -43,7 +43,13 @@ export const DefineProduct: React.FC = () => {
   };
 
   return (
-    <Auth.FormWrapper>
+    <div >
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+    <Auth.FormWrapper >
       <BaseForm layout="vertical" onFinish={handleSubmit}  >
         <S.Title>تعریف  محصول</S.Title>
         <Auth.FormItem
@@ -62,23 +68,25 @@ export const DefineProduct: React.FC = () => {
           <Auth.FormInput placeholder="کد " />
         </Auth.FormItem>
       
-        <BaseButtonsForm.Item name="Groups" label="وضعیت"
+        <BaseButtonsForm.Item name="UnitRef" label="واحد محصول"
            rules={[{ required: true}]}
         >
       <Select>
-        <Option value="Active">
+        <Option value="1">
           <Space align="center">
             {/* <ManOutlined /> */}
-            فعال
+            عدد
           </Space>
         </Option>
-        <Option value="NoActive">
+        <Option value="2">
           <Space align="center">
             {/* <WomanOutlined /> */}
-           غیر فعال
+             کیلوگرم 
           </Space>
         </Option>
       </Select>
+
+      
     </BaseButtonsForm.Item>
 
 
@@ -92,5 +100,10 @@ export const DefineProduct: React.FC = () => {
  
       </BaseForm>
     </Auth.FormWrapper>
+    </div>
+     <Tables />
+     </div>
   );
 };
+
+export default DefineProduct;

@@ -38,6 +38,7 @@ export const FormWrapper = styled.div`
   background-color: rgba(var(--background-rgb-color), 0.93);
   border-radius: ${BORDER_RADIUS};
 
+
   @media only screen and ${media.xs} {
     padding: 2.5rem 1.25rem;
     width: 20.75rem;

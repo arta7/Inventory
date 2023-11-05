@@ -18,7 +18,7 @@ interface DefinePostData {
 }
 
 
- const DefinePost: React.FC = () => {
+ const DefineUnit: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const [isLoading, setLoading] = useState(false);
@@ -37,7 +37,7 @@ interface DefinePostData {
     }}>
     <Auth.FormWrapper >
       <BaseForm layout="vertical" onFinish={handleSubmit}  >
-        <S.Title>تعریف گروه سازمانی</S.Title>
+        <S.Title>تعریف واحد کالا</S.Title>
         <Auth.FormItem
           name="Title"
           label="عنوان"
@@ -68,4 +68,4 @@ interface DefinePostData {
   );
 };
 
-export default DefinePost;
+export default DefineUnit;

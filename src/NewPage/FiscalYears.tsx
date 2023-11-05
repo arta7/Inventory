@@ -18,7 +18,7 @@ interface DefinePostData {
 }
 
 
- const DefinePost: React.FC = () => {
+ const FiscalYears: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const [isLoading, setLoading] = useState(false);
@@ -37,7 +37,7 @@ interface DefinePostData {
     }}>
     <Auth.FormWrapper >
       <BaseForm layout="vertical" onFinish={handleSubmit}  >
-        <S.Title>تعریف گروه سازمانی</S.Title>
+        <S.Title>تعریف  سال مالی</S.Title>
         <Auth.FormItem
           name="Title"
           label="عنوان"
@@ -47,11 +47,11 @@ interface DefinePostData {
         </Auth.FormItem>
 
         <Auth.FormItem
-          label="کد "
+          label="سال "
           name="Code"
           rules={[{ required: true, message: t('common.requiredField') }]}
         >
-          <Auth.FormInput placeholder="کد " />
+          <Auth.FormInput placeholder="سال" />
         </Auth.FormItem>
       
         <BaseForm.Item noStyle>
@@ -68,4 +68,4 @@ interface DefinePostData {
   );
 };
 
-export default DefinePost;
+export default FiscalYears;
