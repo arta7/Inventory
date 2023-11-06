@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Checkbox, Button } from 'antd';
 import { LeftOutlined } from '@ant-design/icons';
 import { BaseForm } from '@app/components/common/forms/BaseForm/BaseForm';
-import { Input as CommonInput } from '@app/components/common/inputs/Input/Input';
+import { Input as CommonInput,TextArea as TextCommonInput } from '@app/components/common/inputs/Input/Input';
 import { InputPassword as CommonInputPassword } from '@app/components/common/inputs/InputPassword/InputPassword';
 import loginBackground from '@app/assets/images/login-bg.webp';
 import { BORDER_RADIUS, FONT_SIZE, FONT_WEIGHT, media } from '@app/styles/themes/constants';
@@ -113,6 +113,15 @@ export const FormItem = styled(BaseForm.Item)`
 `;
 
 export const FormInput = styled(CommonInput)`
+  color: var(--text-main-color);
+  background: transparent;
+
+  & input.ant-input {
+    background: transparent;
+  }
+`;
+
+export const FormInputTextArea = styled(TextCommonInput)`
   color: var(--text-main-color);
   background: transparent;
 

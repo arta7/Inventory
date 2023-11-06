@@ -62,7 +62,8 @@ const PigeonsMaps = React.lazy(() => import('@app/pages/maps/PigeonsMapsPage/Pig
 const Logout = React.lazy(() => import('./Logout'));
 const DefinePost = React.lazy(() => import('@app/NewPage/DefinePost'));
 const DefineProduct = React.lazy(() => import('@app/NewPage/DefineProduct'));
-
+const DefineUserAccess = React.lazy(() => import('@app/NewPage/DefineUserAccess'));
+const DefineSets = React.lazy(() => import('@app/NewPage/DefineSets'));
 
 // export const NFT_DASHBOARD_PATH = '/';
 export const MEDICAL_DASHBOARD_PATH = '/';
@@ -124,6 +125,11 @@ const AuthLayoutFallback = withLoading(AuthLayout);
 const LogoutFallback = withLoading(Logout);
 const DefinePostFallback = withLoading(DefinePost);
 const DefineProductFallback = withLoading(DefineProduct);
+const DefineUserAccessFallback = withLoading(DefineUserAccess)
+
+const DefineSetsFallback = withLoading(DefineSets)
+
+
 
 export const AppRouter: React.FC = () => {
   const protectedLayout = (
@@ -150,6 +156,10 @@ export const AppRouter: React.FC = () => {
           
           <Route path="DefinePost" element={<DefinePostFallback />} />
           <Route path="DefineProduct" element={<DefineProductFallback/>} />
+          <Route path="DefineUserAccessFallback" element={<DefineUserAccessFallback/>} />
+          
+          <Route path="DefineSets" element={<DefineSetsFallback />} />
+
           
           <Route path="charts" element={<Charts />} />
           <Route path="maps">

@@ -8,9 +8,9 @@ import * as Auth from '@app/components/layouts/AuthLayout/AuthLayout.styles';
 import * as S from './SForm.styles';
 import { BaseButtonsForm } from '@app/components/common/forms/BaseButtonsForm/BaseButtonsForm';
 import { Select, Option } from '@app/components/common/selects/Select/Select';
-import { ManOutlined, WomanOutlined } from '@ant-design/icons';
 import { Space } from 'antd';
 import  Tables  from './Tables';
+import CheckBoxTables from './CheckBoxTables';
 
 interface DefinePostData {
   Title: string;
@@ -37,7 +37,7 @@ interface DefinePostData {
     }}>
     <Auth.FormWrapper >
       <BaseForm layout="vertical" onFinish={handleSubmit}  >
-        <S.Title>تعریف پست سازمانی</S.Title>
+        <S.Title>تعریف سِت کالا  </S.Title>
         <Auth.FormItem
           name="Title"
           label="عنوان"
@@ -49,21 +49,35 @@ interface DefinePostData {
         <Auth.FormItem
           label="کد "
           name="Code"
-          rules={[{ required: true, message: t('common.requiredField') }]}
+          // rules={[{ required: true, message: t('common.requiredField') }]}
         >
           <Auth.FormInput placeholder="کد " />
         </Auth.FormItem>
       
+
+        <Auth.FormItem
+          label="توضیحات "
+          name="Details"
+        >
+          <Auth.FormInputTextArea placeholder="توضیحات " />
+        </Auth.FormItem>
+
         <BaseForm.Item noStyle>
-          <Auth.SubmitButton type="primary" htmlType="submit" loading={isLoading}>
+          <Auth.SubmitButton type="primary" htmlType="submit" loading={isLoading} >
            ثبت
           </Auth.SubmitButton>
         </BaseForm.Item>
- 
+
       </BaseForm>
+    
+
     </Auth.FormWrapper>
     </div>
-    <Tables />
+    <CheckBoxTables />
+
+
+
+
     </div>
   );
 };

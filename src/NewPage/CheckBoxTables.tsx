@@ -60,15 +60,13 @@ const CheckBoxTables: React.FC = () => {
 
   return (
     <div>
-      {/* <div style={{ marginBottom: 16 }}>
-        <Button type="primary" onClick={start} disabled={!hasSelected} loading={loading}>
-          Reload
-        </Button>
+      <div style={{ marginBottom: 16 }}>
+        
         <span style={{ marginLeft: 8 }}>
-          {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
+          {/* {hasSelected ? ` ${selectedRowKeys.length} ` : ''} */}
         </span>
-      </div> */}
-      <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
+      </div>
+      <Table rowSelection={rowSelection} columns={columns} dataSource={data} style={{marginTop:20}} />
     </div>
   );
 };
