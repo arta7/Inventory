@@ -10,7 +10,6 @@ import { BaseButtonsForm } from '@app/components/common/forms/BaseButtonsForm/Ba
 import { Select, Option } from '@app/components/common/selects/Select/Select';
 import { Space } from 'antd';
 import  Tables  from './Tables';
-import CheckBoxTables from './CheckBoxTables';
 
 interface DefinePostData {
   Title: string;
@@ -73,7 +72,7 @@ interface DefinePostData {
 
     </Auth.FormWrapper>
     </div>
-    <CheckBoxTables />
+    <Tables />
 
 
 

@@ -18,7 +18,7 @@ interface DefinePostData {
 }
 
 
- const DefineGroupsofSets: React.FC = () => {
+ const DefineSetsofProducts: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const [isLoading, setLoading] = useState(false);
@@ -51,28 +51,28 @@ interface DefinePostData {
       }}>
     <Auth.FormWrapper >
       <BaseForm layout="vertical" onFinish={handleSubmit}  >
-        <S.Title>دسترسی گروه ها</S.Title>
+        <S.Title>محصولات هر سِت </S.Title>
       
-        <BaseButtonsForm.Item name="Groups" label="گروه ها"
+        <BaseButtonsForm.Item name="Sets" label="نام ست"
            rules={[{ required: true}]}
         >
       <Select>
         <Option value="1">
           <Space align="center">
             {/* <ManOutlined /> */}
-            گروه 1
+            ست 1
           </Space>
         </Option>
         <Option value="2">
           <Space align="center">
             {/* <WomanOutlined /> */}
-             گروه 2 
+             ست 2 
           </Space>
         </Option>
         <Option value="3">
           <Space align="center">
             {/* <WomanOutlined /> */}
-             گروه 3 
+             ست 3 
           </Space>
         </Option>
       </Select>
@@ -97,4 +97,4 @@ interface DefinePostData {
   );
 };
 
-export default DefineGroupsofSets;
+export default DefineSetsofProducts;

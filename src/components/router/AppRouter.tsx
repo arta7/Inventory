@@ -60,10 +60,23 @@ const LeafletMaps = React.lazy(() => import('@app/pages/maps/LeafletMapsPage/Lea
 const ReactSimpleMaps = React.lazy(() => import('@app/pages/maps/ReactSimpleMapsPage/ReactSimpleMapsPage'));
 const PigeonsMaps = React.lazy(() => import('@app/pages/maps/PigeonsMapsPage/PigeonsMapsPage'));
 const Logout = React.lazy(() => import('./Logout'));
+
+
+
+
 const DefinePost = React.lazy(() => import('@app/NewPage/DefinePost'));
 const DefineProduct = React.lazy(() => import('@app/NewPage/DefineProduct'));
 const DefineUserAccess = React.lazy(() => import('@app/NewPage/DefineUserAccess'));
 const DefineSets = React.lazy(() => import('@app/NewPage/DefineSets'));
+const DefineUsers = React.lazy(() => import('@app/NewPage/DefineUsers'));
+const DefineUnit = React.lazy(() => import('@app/NewPage/DefineUnit'));
+const DefineGroups = React.lazy(() => import('@app/NewPage/DefineGroups'));
+const FiscalYears = React.lazy(() => import('@app/NewPage/FiscalYears'));
+const DefineParts = React.lazy(() => import('@app/NewPage/DefineParts'));
+const DefineSetsofProducts = React.lazy(() => import('@app/NewPage/DefineSetsofProducts'));
+const DefineGroupsofSets = React.lazy(() => import('@app/NewPage/DefineGroupsofSets'));
+
+
 
 // export const NFT_DASHBOARD_PATH = '/';
 export const MEDICAL_DASHBOARD_PATH = '/';
@@ -123,11 +136,19 @@ const Payments = withLoading(PaymentsPage);
 
 const AuthLayoutFallback = withLoading(AuthLayout);
 const LogoutFallback = withLoading(Logout);
+
+
 const DefinePostFallback = withLoading(DefinePost);
 const DefineProductFallback = withLoading(DefineProduct);
 const DefineUserAccessFallback = withLoading(DefineUserAccess)
-
+const DefineUsersFallback = withLoading(DefineUsers)
 const DefineSetsFallback = withLoading(DefineSets)
+const FiscalYearsFallback = withLoading(FiscalYears)
+const DefineGroupsFallback = withLoading(DefineGroups)
+const DefinePartsFallback = withLoading(DefineParts)
+const DefineUnitFallback = withLoading(DefineUnit)
+const DefineGroupsofSetsFallback = withLoading(DefineGroupsofSets)
+const DefineSetsofProductsFallback = withLoading(DefineSetsofProducts)
 
 
 
@@ -154,11 +175,20 @@ export const AppRouter: React.FC = () => {
           <Route path="data-tables" element={<DataTables />} />
 
           
+
+          <Route path="DefineUsers" element={<DefineUsersFallback />} />
           <Route path="DefinePost" element={<DefinePostFallback />} />
           <Route path="DefineProduct" element={<DefineProductFallback/>} />
-          <Route path="DefineUserAccessFallback" element={<DefineUserAccessFallback/>} />
-          
+          <Route path="DefineUserAccess" element={<DefineUserAccessFallback/>} />
           <Route path="DefineSets" element={<DefineSetsFallback />} />
+          <Route path="DefineUnit" element={<DefineUnitFallback />} />
+          <Route path="FiscalYears" element={<FiscalYearsFallback />} />
+          <Route path="DefineGroups" element={<DefineGroupsFallback />} />
+          <Route path="DefineParts" element={<DefinePartsFallback />} />
+          <Route path="DefineGroupsofSets" element={<DefineGroupsofSetsFallback />} />
+          <Route path="DefineSetsofProducts" element={<DefineSetsofProductsFallback />} />
+
+
 
           
           <Route path="charts" element={<Charts />} />

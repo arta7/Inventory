@@ -9,6 +9,7 @@ import {
   TableOutlined,
   UserOutlined,
   BlockOutlined,
+  HomeFilled,
 } from '@ant-design/icons';
 import { ReactComponent as NftIcon } from '@app/assets/icons/nft-icon.svg';
 
@@ -29,25 +30,70 @@ export const sidebarNavigation: SidebarNavigationItem[] = [
   //   icon: <NftIcon />,
   // },
   {
-    title: 'common.medical-dashboard',
+    title: 'صفحه اصلی',
     key: 'medical-dashboard',
-    url: '/medical-dashboard',
+    url: '/',
     icon: <DashboardOutlined />,
   },
   {
-    title: 'common.apps',
+    title: 'اطلاعات پایه',
     key: 'apps',
     icon: <HomeOutlined />,
     children: [
       {
-        title: 'common.feed',
-        key: 'feed',
-        url: '/apps/feed',
+        title: 'تعریف کاربر',
+        key: 'DefineUser',
+        url: '/DefineUsers',
       },
       {
-        title: 'common.kanban',
-        key: 'kanban',
-        url: '/apps/kanban',
+        title: 'تعریف کالا',
+        key: 'DefineProduct',
+        url: '/DefineProduct',
+      },
+      {
+        title: 'تعریف سِت ها',
+        key: 'DefineSets',
+        url: '/DefineSets',
+      },
+      {
+        title: 'تعریف بخش ها',
+        key: 'DefineParts',
+        url: '/DefineParts',
+      },
+      {
+        title: 'تعریف گروه کالا',
+        key: 'DefineGroups',
+        url: '/DefineGroups',
+      },
+      {
+        title: 'تعریف سال مالی',
+        key: 'FiscalYears',
+        url: '/FiscalYears',
+      },
+      {
+        title: 'تعریف واحد کالا',
+        key: 'DefineUnit',
+        url: '/DefineUnit',
+      },
+      {
+        title: 'تعریف گروه کاربری',
+        key: 'DefinePost',
+        url: '/DefinePost',
+      },
+      {
+        title: 'تعریف دسترسی ست ابزار',
+        key: 'DefineSetsofProducts',
+        url: '/DefineSetsofProducts',
+      },
+      {
+        title: 'تعریف دسترسی گروه ',
+        key: 'DefineGroupsofSets',
+        url: '/DefineGroupsofSets',
+      },
+      {
+        title: 'تعریف دسترسی کاربران',
+        key: 'DefineUserAccess',
+        url: '/DefineUserAccess',
       },
     ],
   },
