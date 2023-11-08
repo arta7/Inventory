@@ -65,6 +65,7 @@ const Logout = React.lazy(() => import('./Logout'));
 
 
 const DefinePost = React.lazy(() => import('@app/NewPage/DefinePost'));
+const DefineStates = React.lazy(() => import('@app/NewPage/DefineStates'));
 const DefineProduct = React.lazy(() => import('@app/NewPage/DefineProduct'));
 const DefineUserAccess = React.lazy(() => import('@app/NewPage/DefineUserAccess'));
 const DefineSets = React.lazy(() => import('@app/NewPage/DefineSets'));
@@ -138,6 +139,7 @@ const AuthLayoutFallback = withLoading(AuthLayout);
 const LogoutFallback = withLoading(Logout);
 
 
+const DefineStatesFallback = withLoading(DefineStates);
 const DefinePostFallback = withLoading(DefinePost);
 const DefineProductFallback = withLoading(DefineProduct);
 const DefineUserAccessFallback = withLoading(DefineUserAccess)
@@ -177,6 +179,7 @@ export const AppRouter: React.FC = () => {
           
 
           <Route path="DefineUsers" element={<DefineUsersFallback />} />
+          <Route path="DefineStates" element={<DefineStatesFallback />} />
           <Route path="DefinePost" element={<DefinePostFallback />} />
           <Route path="DefineProduct" element={<DefineProductFallback/>} />
           <Route path="DefineUserAccess" element={<DefineUserAccessFallback/>} />

@@ -76,6 +76,11 @@ export const sidebarNavigation: SidebarNavigationItem[] = [
         url: '/DefineUnit',
       },
       {
+        title: 'تعریف نوع سند',
+        key: 'DefineStates',
+        url: '/DefineStates',
+      },
+      {
         title: 'تعریف گروه کاربری',
         key: 'DefinePost',
         url: '/DefinePost',
@@ -95,6 +100,7 @@ export const sidebarNavigation: SidebarNavigationItem[] = [
         key: 'DefineUserAccess',
         url: '/DefineUserAccess',
       },
+
     ],
   },
   {
