@@ -13,6 +13,7 @@ interface SearchOverlayProps {
   data: CategoryComponents[] | null;
   isOverlayVisible: boolean;
   setOverlayVisible: (state: boolean) => void;
+  placeHolder:string;
 }
 
 export const SearchDropdown: React.FC<SearchOverlayProps> = ({
@@ -21,6 +22,7 @@ export const SearchDropdown: React.FC<SearchOverlayProps> = ({
   data,
   isOverlayVisible,
   setOverlayVisible,
+  placeHolder
 }) => {
   const [isFilterVisible, setFilterActive] = useState(false);
 
@@ -46,7 +48,7 @@ export const SearchDropdown: React.FC<SearchOverlayProps> = ({
           <InputSearch
             width="100%"
             value={query}
-            placeholder={t('header.search')}
+            placeholder={placeHolder}
             filter={
               <Btn
                 size="small"

@@ -8,6 +8,7 @@ export const BirthdayItem: React.FC = () => {
 
   return (
     <BaseButtonsForm.Item name="birthday" label="تاریخ تولد">
+      
       <S.BirthdayPicker format="L" />
     </BaseButtonsForm.Item>
   );

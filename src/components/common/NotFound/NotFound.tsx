@@ -12,7 +12,7 @@ export const NotFound: React.FC = () => {
       <S.ImgWrapper>
         <Image src={notFoundImg} alt="Not found" preview={false} />
       </S.ImgWrapper>
-      <S.Text>{t('common.notFound')}</S.Text>
+      <S.Text>موردی پیدا نشد</S.Text>
     </S.NotFoundWrapper>
   );
 };
